@@ -80,6 +80,15 @@
                 <module>console</module>
             </modules>
         </profile>
+        <profile>
+            <id>celest-sofa</id>
+            <activation>
+                <file> <exists>celest-sofa/pom.xml</exists> </file>
+            </activation>
+            <modules>
+                <module>celest-sofa</module>
+            </modules>
+        </profile>
     </profiles>
 
     <build>
