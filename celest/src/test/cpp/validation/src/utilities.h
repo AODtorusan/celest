@@ -26,6 +26,7 @@ inline bool dirExists(const std::string& dir) {
 /************************************************************************/
 
 #include <string>
+#include <iostream>
 
 inline std::string base_directory() {
 #ifdef _MSC_VER
@@ -37,7 +38,7 @@ inline std::string base_directory() {
     return "src/test/resources/";
 }
 
-void printMatrix(double m[3][3]) {
+inline void printMatrix(double m[3][3]) {
     for (int row=0; row<3; ++row) {
         std::cout << "[\t";
         for (int col=0; col<3; ++col)

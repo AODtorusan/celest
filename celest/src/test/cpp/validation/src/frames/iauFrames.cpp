@@ -9,7 +9,7 @@
  * Generates the results used in the following test cases;
  * - 
  */
-void precessionNutationPolarMotion() {
+void precessionNutationPolarMotion2() {
     std::cout << std::setprecision(16);
 
     double epoch_utc_jd, epoch_utc_fraction;         // UTC
