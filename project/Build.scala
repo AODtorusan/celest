@@ -56,7 +56,7 @@ object MyBuild extends Build {
     settings = buildSettings ++ forkedRun ++ Seq(
       unmanagedSourceDirectories in Compile += baseDirectory.value / "src/main/interfaces",
       // Add dependencies
-      libraryDependencies ++= Seq( commonsMath, jgrapht, scalaGuice, scalaParser ),
+      libraryDependencies ++= Seq( spireMath, commonsMath, jgrapht, scalaGuice, scalaParser ),
       libraryDependencies ++= indexerAll,
       libraryDependencies ++= aetherAll
     ) /* ++ assemblySettings */

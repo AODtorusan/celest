@@ -24,6 +24,7 @@ object Dependencies {
   val scalaParser =     "org.scala-lang.modules"      %% "scala-parser-combinators" % "1.0.2"
   val scalaTest =       "org.scalatest"               %% "scalatest"                % "2.2.1"       % "test"
   val servletApi =      "javax.servlet"               %  "servlet-api"              % "2.5" // Required for reflections
+  val spireMath =       "org.spire-math"              %% "spire"                    % "0.9.0"
 
   val indexer =         "org.apache.maven.indexer"    %  "indexer-core"             % "6.0-SNAPSHOT"
   val wagonHttp =       "org.apache.maven.wagon"      %  "wagon-http-lightweight"   % "2.3"
