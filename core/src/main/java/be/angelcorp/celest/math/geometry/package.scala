@@ -1,5 +1,7 @@
 package be.angelcorp.celest.math
 
+import breeze.linalg._
+
 package object geometry {
 
   /**
@@ -231,5 +233,34 @@ package object geometry {
     result.m22 += mtx.m02 * offset.x + mtx.m12 * offset.y
   }
 
+  implicit def toBreeze( v: Vec2 ): DenseVector[Double] =
+    DenseVector(v.x, v.y)
+
+  implicit def toBreeze( v: Vec3 ): DenseVector[Double] =
+    DenseVector(v.x, v.y, v.z)
+
+  implicit def toBreeze( v: Vec4 ): DenseVector[Double] =
+    DenseVector(v.x, v.y, v.z, v.w)
+
+  implicit def toBreeze( m: Mat3 ): DenseMatrix[Double] =
+    DenseMatrix( (m.m00, m.m01, m.m02), (m.m10, m.m11, m.m12), (m.m20, m.m21, m.m22) )
+
+  implicit def toBreeze( m: Mat4 ): DenseMatrix[Double] =
+    DenseMatrix( (m.m00, m.m01, m.m02, m.m03), (m.m10, m.m11, m.m12, m.m13), (m.m20, m.m21, m.m22, m.m23), (m.m30, m.m31, m.m32, m.m33) )
+
+  implicit def toVec( v: DenseVector[Double] ): Vec2 =
+    Vec2( v(0), v(1) )
+
+  implicit def toVec3( v: DenseVector[Double] ): Vec3 =
+    Vec3( v(0), v(1), v(2) )
+
+  implicit def toVec4( v: DenseVector[Double] ): Vec4 =
+    Vec4( v(0), v(1), v(2), v(3) )
+
+  implicit def toMat3( m: DenseMatrix[Double] ): Mat3 =
+    Mat3( m(0, 0), m(0, 1), m(0, 2), m(1, 0), m(1, 1), m(1, 2), m(2, 0), m(2, 1), m(2, 2)  )
+
+  implicit def toMat4( m: DenseMatrix[Double] ): Mat4 =
+    Mat4( m(0, 0), m(0, 1), m(0, 2), m(0, 3), m(1, 0), m(1, 1), m(1, 2), m(1, 3), m(2, 0), m(2, 1), m(2, 2), m(2, 3), m(3, 0), m(3, 1), m(3, 2), m(3, 3) )
 
 }
