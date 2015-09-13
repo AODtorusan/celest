@@ -1,0 +1,10 @@
+In this folder, you should extract the sofa library sources.
+
+These can be obtained from the SOFA project webpage at;
+
+      http://www.iausofa.org/
+
+The tests where based on the following release;
+
+      Release 9 2012 March 1
+

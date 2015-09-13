@@ -1,0 +1,12 @@
+src
+doc
+00READ.ME
+license.txt
+
+*.vcxproj.user
+*.sdf
+*.suo
+*.obj
+*.o
+
+*XE Results*
